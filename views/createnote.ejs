@@ -1,0 +1,18 @@
+<%- include('header', {title: `Create Bird Watching Note`}); -%> <%-
+include('navbar'); -%>
+
+<body>
+  <div class="container-lg text-center">
+    <h2>Create New Bird Watching Note</h2>
+    <form action="/note" method="POST">
+      <label for="observation_date">Observation Date</label><br />
+      <input type="date" id="observation_date" name="observation_date" /><br />
+      <label for="behaviour">Behaviour</label><br />
+      <input type="text" id="behaviour" name="behaviour" /><br />
+      <label for="flock_size">Flock Size</label><br />
+      <input type="number" id="flock_size" name="flock_size" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+<%- include('footer'); -%>

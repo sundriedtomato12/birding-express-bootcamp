@@ -1,0 +1,36 @@
+<%- include('header', {title: `Create Bird Watching Note`}); -%> <%-
+include('navbar'); -%>
+
+<body>
+  <div class="container-lg text-center" id="main-header">
+    <div class="row">
+      <div class="col-12">
+        <h2>List of Bird Watching Notes</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-lg text-center" id="main-body">
+    <table class="table">
+      <thread>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Observation Date</th>
+          <th scope="col">Behaviour</th>
+          <th scope="col">Flock Size</th>
+        </tr>
+      </thread>
+      <tbody>
+        <% for (let i = 0; i < data.length; i += 1) { %>
+        <tr>
+          <th scope="row"><%= data[i].id %></th>
+          <td><%= data[i].observation_date %></td>
+          <td><%= data[i].behaviour %></td>
+          <td><%= data[i].flock_size %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+<%- include('footer'); -%>
