@@ -1,0 +1,11 @@
+<%- include('header', {title: `View Bird Watching Note`}); -%> <%- include('navbar');
+-%>
+<body>
+<div class="container-lg text-center">
+    <h2>View Bird Watching Note ID: <%= data.id %></h2>
+    <p><h3>Observation Date:</h3> <%= data.observation_date %></p>
+    <p><h3>Behaviour:</h3> <%= data.behaviour %></p>
+    <p><h3>Flock Size:</h3> <%= data.flock_size %></p>
+  </div>
+</body>
+<%- include('footer'); -%> 

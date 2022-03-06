@@ -18,6 +18,9 @@ include('navbar'); -%>
           <th scope="col">Observation Date</th>
           <th scope="col">Behaviour</th>
           <th scope="col">Flock Size</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
         </tr>
       </thread>
       <tbody>
@@ -27,6 +30,30 @@ include('navbar'); -%>
           <td><%= data[i].observation_date %></td>
           <td><%= data[i].behaviour %></td>
           <td><%= data[i].flock_size %></td>
+          <td>
+            <a
+              class="btn btn-primary"
+              href="/note/<%= data[i].id %>"
+              role="button"
+              >View Note</a
+            >
+          </td>
+          <td>
+            <a
+              class="btn btn-primary"
+              href="/note/<%= data[i].id %>/edit"
+              role="button"
+              >Edit Note</a
+            >
+          </td>
+          <td>
+            <a
+              class="btn btn-primary"
+              href="/note/<%= data[i].id %>/delete"
+              role="button"
+              >Delete Note</a
+            >
+          </td>
         </tr>
         <% } %>
       </tbody>

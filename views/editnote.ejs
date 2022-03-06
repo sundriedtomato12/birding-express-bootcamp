@@ -1,0 +1,33 @@
+<%- include('header', {title: `Edit Bird Watching Note`}); -%> <%-
+include('navbar'); -%>
+
+<body>
+  <div class="container-lg text-center">
+    <h2>Edit Bird Watching Note ID: <%= data.id %></h2>
+    <form action="/note/<%= data.id %>/?method=PUT" method="POST">
+      <label for="observation_date">Observation Date</label><br />
+      <input
+        type="date"
+        id="observation_date"
+        name="observation_date"
+        value="<%= data.observation_date %>"
+      /><br />
+      <label for="behaviour">Behaviour</label><br />
+      <input
+        type="text"
+        id="behaviour"
+        name="behaviour"
+        value="<%= data.behaviour %>"
+      /><br />
+      <label for="flock_size">Flock Size</label><br />
+      <input
+        type="number"
+        id="flock_size"
+        name="flock_size"
+        value="<%= data.flock_size %>"
+      /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+<%- include('footer'); -%>
