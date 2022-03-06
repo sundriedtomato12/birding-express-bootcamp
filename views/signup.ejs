@@ -1,0 +1,28 @@
+<%- include('header', {title: `Create Bird Watching Note`}); -%> <%-
+include('navbar'); -%>
+
+<body>
+  <div class="container-lg text-center" id="header">
+    <h2>New User Sign Up</h2>
+  </div>
+  <div class="container-lg text-left">
+    <form class="needs-validation" action="/signup" method="POST">
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label><br />
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label><br />
+        <input type="password" id="password" name="password" required />
+      </div>
+      <input type="submit" value="Sign Up" />
+    </form>
+  </div>
+</body>
+<%- include('footer'); -%>

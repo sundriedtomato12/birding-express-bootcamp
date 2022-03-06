@@ -2,15 +2,36 @@
 include('navbar'); -%>
 
 <body>
-  <div class="container-lg text-center">
+  <div class="container-lg text-center" id="header">
     <h2>Create New Bird Watching Note</h2>
-    <form action="/note" method="POST">
-      <label for="observation_date">Observation Date</label><br />
-      <input type="date" id="observation_date" name="observation_date" /><br />
-      <label for="behaviour">Behaviour</label><br />
-      <input type="text" id="behaviour" name="behaviour" /><br />
-      <label for="flock_size">Flock Size</label><br />
-      <input type="number" id="flock_size" name="flock_size" /><br />
+  </div>
+  <div class="container-lg text-left">
+    <form class="needs-validation" action="/note" method="POST">
+      <div class="form-group">
+        <label for="observation_date" class="form-label">Observation Date</label
+        ><br />
+        <input
+          type="date"
+          class="form-control"
+          id="observation_date"
+          name="observation_date"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="behaviour" class="form-label">Behaviour</label><br />
+        <textarea
+          type="text"
+          class="form-control"
+          id="behaviour"
+          name="behaviour"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="flock_size" class="form-label">Flock Size</label><br />
+        <input type="number" id="flock_size" name="flock_size" required />
+      </div>
       <input type="submit" value="Submit" />
     </form>
   </div>

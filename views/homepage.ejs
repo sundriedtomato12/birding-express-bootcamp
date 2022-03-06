@@ -47,12 +47,13 @@ include('navbar'); -%>
             >
           </td>
           <td>
-            <a
-              class="btn btn-primary"
-              href="/note/<%= data[i].id %>/delete"
-              role="button"
-              >Delete Note</a
-            >
+            <form action="/note/<%= data[i].id %>?_method=DELETE" method="POST">
+              <input
+                class="btn btn-primary"
+                type="submit"
+                value="Delete Note"
+              />
+            </form>
           </td>
         </tr>
         <% } %>
