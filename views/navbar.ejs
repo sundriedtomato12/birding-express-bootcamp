@@ -17,10 +17,12 @@
     <li class="nav-item">
       <a class="nav-link active" href="/login">User Login</a>
     </li>
+    <% if (loginResult[0] === 'logged in') { %>
     <li class="nav-item">
       <form action="/logout?_method=DELETE" method="POST">
         <input type="submit" value="Log Out" />
       </form>
     </li>
+    <% } %>
   </ul>
 </div>
